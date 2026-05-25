@@ -1,44 +1,46 @@
-:root {
-    /* تم تغيير البنفسجي إلى لون حليبي (Cream) */
-    --primary-color: #F5F5DC; 
-    --bg-dark: #1a1a1a;
-    --text-color: #ffffff;
+/* تنسيق شامل لجميع الأزرار في الموقع */
+button, 
+a.btn, 
+.submit-btn, 
+.apply-btn, 
+.discord-btn, 
+input[type="submit"], 
+input[type="button"] {
+    background-color: #F5F5DC !important; /* اللون الحليبي */
+    color: #000000 !important;            /* نص أسود للوضوح */
+    border: 2px solid #F5F5DC !important; /* إطار حليبي */
+    padding: 12px 24px !important;
+    border-radius: 8px !important;        /* زوايا دائرية */
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important; /* تأثير نعومة عند الضغط */
+    text-decoration: none !important;
+    display: inline-block;
+    text-align: center;
 }
 
-/* تحديث هوية المشروع */
-.brand-name::after {
-    content: "SM KINGDOM";
-    font-weight: bold;
-    color: var(--primary-color);
+/* تأثير التفاعل عند مرور الماوس (Hover) */
+button:hover, 
+a.btn:hover, 
+.submit-btn:hover {
+    background-color: #e5e5c5 !important; /* لون حليبي أغمق قليلاً عند التمرير */
+    border-color: #e5e5c5 !important;
+    transform: scale(1.02);               /* تكبير بسيط عند التمرير */
 }
 
-/* تحديث ألوان الحاويات (Containers) */
-.content-box {
-    background-color: #2d2d2d;
-    border: 1px solid var(--primary-color);
-    border-radius: 8px;
-    padding: 20px;
+/* تنسيق خاص للأزرار المفرغة (إذا كنت تستخدم أزرار شفافة) */
+.btn-outline {
+    background-color: transparent !important;
+    border: 2px solid #F5F5DC !important;
+    color: #F5F5DC !important;
 }
 
-/* تحديث أزرار الإرسال */
-.submit-btn {
-    background-color: var(--primary-color);
-    color: #000;
-    font-weight: bold;
-}
-<!-- تحديث الهيدر -->
-<header class="navbar">
-    <div class="brand-name">SM KINGDOM</div>
-    <nav>
-        <ul>
-            <li>الرئيسية</li>
-            <li>صناع المحتوى</li>
-            <li>القوانين</li>
-        </ul>
-    </nav>
-</header>
+.btn-outline:hover {
+    background-color: #F5F5DC !important;
+    color: #000000 !important;
+}<div class="logo">SM KINGDOM</div>
 
-<!-- تحديث الفوتر -->
-<footer class="footer">
+<footer>
     <p>© 2026 جميع الحقوق محفوظة لـ SM KINGDOM</p>
 </footer>
+
